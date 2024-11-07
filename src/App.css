@@ -1,40 +1,49 @@
-*{
+* {
   margin: 0;
   padding: 0;
 }
-body{
+
+body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   overflow-x: hidden;
 }
-html{
+
+html {
   overflow-x: hidden;
 }
 
-.messages{
+.messages {
   display: flex;
   flex-direction: column;
   padding: 0px 300px;
   padding-top: 30px;
+  overflow-y: auto;
+  /* Enable vertical scrolling */
+  flex-grow: 1;
+  /* Allow the messages container to grow and fill available space */
+  max-height: calc(80vh - 100px);
+  /* Adjust this value based on header and footer height */
 }
 
-.messages .userMsg{
+.messages .userMsg {
   clear: both;
   background-color: #181818;
   padding: 15px;
   border-radius: 30px;
-  max-width: 60vw;
+  max-width: 40%;
+  /* Change max-width to 40% for better responsiveness */
   align-self: flex-end;
   min-width: 20vw;
 }
 
-.messages .responseMsg{
+.messages .responseMsg {
   clear: both;
   background-color: #181818;
   padding: 15px;
   border-radius: 30px;
-  max-width: 60vw;
+  max-width: 40vw;
   align-self: flex-start;
   min-width: 20vw;
   margin-top: 15px;
